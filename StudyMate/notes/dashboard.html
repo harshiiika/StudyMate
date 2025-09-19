@@ -1,0 +1,47 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <h1>Welcome to the Dashboard!</h1>
+  <p>Subject: <span id="subjectName"></span></p>
+  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reprehenderit in totam eos hic vitae dolore
+    illum? Repudiandae, temporibus? Quasi numquam, aliquid consectetur, obcaecati exercitationem omnis ducimus cum
+    provident at necessitatibus odio. Delectus molestiae culpa maiores ducimus animi veniam maxime dolor. Quod illo
+    fugit quasi, obcaecati quam aut laudantium sint rerum dicta cum nesciunt ea adipisci explicabo soluta amet facere
+    voluptatibus labore molestiae dolorum velit sit, rem neque incidunt? Laborum voluptatibus voluptates doloremque,
+    placeat minus nostrum quam sit ullam optio similique molestiae quaerat, nemo, tempore fugiat velit? Fuga minus
+    dolore, beatae harum illum suscipit voluptates eum, culpa fugit architecto distinctio doloribus explicabo quis rerum
+    maxime? Tempora soluta nulla distinctio aspernatur, maxime, eos doloremque beatae molestias eaque quod mollitia
+    quaerat iure aut suscipit? Repellat eius aut excepturi facilis reprehenderit voluptas, minima facere accusamus
+    quisquam blanditiis? Iste cum aliquam ipsum aperiam ea quod dolore inventore nisi eos, deleniti, repellendus
+    architecto a nostrum voluptate amet. Corporis dolorum sint blanditiis non iusto neque praesentium modi dicta animi.
+    Esse, saepe, numquam quibusdam aliquam aperiam iste assumenda modi corporis distinctio, soluta nam ad cum? Repellat
+    eaque provident impedit adipisci, odio cum temporibus, itaque consectetur vel voluptates maxime hic facilis ab ut?
+    Tempore quas veritatis numquam velit sint ipsum asperiores nulla praesentium perferendis voluptates, veniam earum
+    totam consectetur officiis aut, illo doloribus nam sed? Deleniti eligendi maiores unde ipsam architecto nesciunt cum
+    recusandae illo incidunt quidem ducimus modi, at laudantium molestiae repellendus cupiditate quos minima obcaecati,
+    esse inventore eaque? Sint, ad! Sint excepturi dolores at veniam aspernatur, laboriosam provident error qui tempora
+    doloremque molestiae ipsam repellat alias vitae esse quis fuga quos deleniti cum inventore nostrum! Suscipit, omnis
+    aliquam optio nisi excepturi amet facere? Dolores, tempore. Quo iste distinctio corrupti. Numquam exercitationem
+    provident distinctio, consectetur error consequatur atque porro consequuntur architecto deleniti, repudiandae
+    tempore ab! Aut, magni.</h3>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(10, 36, 86);
+      color: beige;
+    }
+  </style>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("subjectName").textContent = params.get("subject");
+  </script>
+</body>
+
+</html>

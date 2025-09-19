@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="planet-background" id="planet-background">
+  <div class="planet">
+    <img src="planets/dsa.png" alt="Earth">
+    <p>DSA</p>
+  </div>
+  <div class="planet">
+    <img src="planets/dip.png" alt="Mars">
+    <p>DIP</p>
+  </div>
+  <div class="planet">
+    <img src="planets/daa.png" alt="Jupiter">
+    <p>DAA</p>
+  </div>
+  <div class="planet">
+    <img src="planets/ai.png" alt="Earth">
+    <p>AI</p>
+  </div>
+  <div class="planet">
+    <img src="planets/java.png" alt="Mars">
+    <p>JAVA</p>
+  </div>
+  <div class="planet">
+    <img src="planets/php.png" alt="Jupiter">
+    <p>PHP</p>
+  </div>
+  <div class="planet">
+    <img src="planets/apt.png" alt="Earth">
+    <p>APT</p>
+  </div>
+  <div class="planet">
+    <img src="planets/maths.png" alt="Mars">
+    <p>MATHS</p>
+  </div>
+</div>
+
+<div class="start-screen" id="start-screen">
+    <h2>Welcome to StudyMate Quiz!</h2>
+    <p>Test your knowledge and conquer the cosmos 🚀</p>
+    <button id="start-btn">Start Quiz</button>
+</div>
+
+    <div class="quiz-container">
+        <div id="timer" class="timer">Time Left: 20s</div>
+        <h1>🪐 StudyMate Quiz Module</h1>
+        <div class="progress">Question <span id="current-question">1</span> of <span id="total-questions">5</span></div>
+
+        <div id="quiz-content">
+            <div class="question" id="question-text">Loading question...</div>
+            <div class="options" id="options-container"></div>
+            <div id="explanation" class="explanation" style="margin-top: 10px; display: none;"></div>
+
+
+            <div class="controls">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn" disabled>Next</button>
+            </div>
+        </div>
+
+        <div class="result" id="result">
+            <h2>🚀 Mission Completed!</h2>
+            <p>Your score:</p>
+            <div class="score" id="score">0/5</div>
+            <button id="restart-btn">Retake Quiz</button>
+        </div>
+    <button id="back-btn" style="margin-top: 20px;">← Quit</button>
+</div>
+    <script src="quiz.js"></script>
+</body>
+</html>

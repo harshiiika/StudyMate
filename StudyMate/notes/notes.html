@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<link rel="stylesheet" href="notes.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Made Simple</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section-1">
+            <i class="fa-solid fa-award" style="color: #e41b57; font-size: 70px;
+    margin: 30px 30px;"></i>
+
+
+
+            <a href="/chatty/chat.html"><i class="fa-solid fa-comments"></i></a>
+            <a href="/diary/auth.diary.html"><i class="fa-solid fa-book"></i></a>
+            <a href="/notes/notes.html"><i class="fa-solid fa-note-sticky"></i></a>
+            <a href="/panel.5/panel.html"><i class="fa-solid fa-house"></i></a>
+
+            <a href="/panel.5/panel.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+
+        </div>
+
+        <div class="section-2">
+
+            <div class="top">
+
+                <div class="welcome">
+                    <h1>MY DASHBOARD</h1><br>
+
+                    <p style="font-size: x-large;"><i>Welcome! Let's Do It.</i></p>
+                </div>
+
+                <div class="icons">
+
+
+                    <button class="btn-link" onclick="openPopup()"><i class="fa-solid fa-link"></i></button>
+                    <div class="popup" id="popup">
+                        <h1>Add Media</h1>
+                        <img src="/images/add-media.png" alt="options-img">
+                        <button class="button" onclick="closePopup()">Done</button>
+                    </div>
+
+
+                    <button class="btn-check" onclick="openNewNotePopup()"><i
+                            class="fa-solid fa-circle-check"></i></button>
+                    <div class="popup2" id="popup2">
+                        <h1>Add New Note</h1>
+                        <textarea class="add-note" rows="10" cols="50"
+                            placeholder="Type Your Note Here...✍️"></textarea>
+                        <button class="button2" onclick="closeNewNotePopup()">Save Entry</button>
+                    </div>
+
+
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+            </div>
+            <div class="search">
+
+                <p class="my-notes" style="font-size: 32px;"> <i>MY NOTES</i></p><br>
+                <!-- <div class="scroll-loop"> -->
+                <div class="btns">
+                    <button class="btn1" onclick="enlargeCard('DBMS')">DBMS(9)</button>
+                    <button class="btn2" onclick="enlargeCard('JAVA')">JAVA(5)</button>
+                    <button class="btn3" onclick="enlargeCard('PY')">PY(6)</button>
+                    <button class="btn4" onclick="enlargeCard('DIP')">DIP(2)</button>
+                    <button class="btn5" onclick="enlargeCard('OOPS')">OOPS(3)</button>
+                    <button class="btn6" onclick="enlargeCard('DAA')">DAA(1)</button>
+                    <button class="btn7" onclick="enlargeCard('DSA')">DSA(4)</button>
+                    <button class="btn8" onclick="enlargeCard('IIOT')">IIOT(2)</button>
+                </div>
+                <!-- </div> -->
+
+                <div class="cards">
+
+                    <div class="pair1">
+                        <div class="card1" id="DBMS" onclick="enlargeCard('DBMS');"
+                            style="background-color: rebeccapurple;">
+                            <h2>DBMS</h2>
+                            <b>Database Management System </b> <br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusamus incidunt
+                                voluptatibus voluptatum atque ad molestias illo praesentium recusandae, sit, dolorem
+                                sapiente nemo, blanditiis ipsam iste tempore voluptates minus assumenda?</p>
+                        </div>
+
+                        <div class="card2" id="JAVA" onclick="enlargeCard('JAVA');" style="background-color: #ffb300;">
+                            <h2>JAVA</h2>
+                            <b>Java Programming Language</b> <br>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, ipsa repellat. Molestiae
+                                impedit debitis iure fugiat odit aspernatur laudantium amet libero enim accusantium
+                                omnis consectetur soluta, voluptatum iusto quisquam quas?</p>
+                        </div>
+
+                        <div class="card3" id="PY" onclick="enlargeCard('PY');" style="background-color: #ff4081;">
+                            <h2>PYTHON</h2>
+                            <b>Python Programming Language</b><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis hic saepe officiis
+                                consequuntur provident qui laudantium, sed veritatis dolorem aliquam libero eveniet
+                                beatae placeat quis quod molestiae facere, soluta impedit?</p>
+                        </div>
+                        <div class="card4" id="DIP" onclick="enlargeCard('DIP');" style="background-color: #00bcd4;">
+                            <h2>DIP</h2>
+                            <b>Digital Image Processing</b><br>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati earum eveniet
+                                exercitationem, eum saepe ea nam perferendis, voluptatum fuga alias qui odio ut, quasi
+                                facilis omnis veniam nulla inventore dolorem?</p>
+                        </div>
+                    </div>
+
+                    <div class="pair2">
+
+
+                        <div class="card5" id="OOPS" onclick="enlargeCard('OOPS');" style="background-color: #8bc34a;">
+                            <h2>OOPS</h2>
+                            <b>Object Oriented Programming System</b><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, officia possimus. Vero earum
+                                quam quod rem assumenda maxime amet vitae libero, aperiam doloremque delectus incidunt
+                                debitis aut autem qui nobis!</p>
+                        </div>
+
+                        <div class="card6" id="DAA" onclick="enlargeCard('DAA');" style="background-color: #ff9800;">
+                            <h2>DAA</h2>
+                            <b>Design and Analysis of Algorithms</b><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores saepe odio vitae porro
+                                perferendis nulla, ipsum commodi eos quis ducimus architecto accusamus harum expedita,
+                                natus ex rem magni molestias laboriosam.</p>
+                        </div>
+
+
+                        <div class="card7" id="DSA" onclick="enlargeCard('DSA');" style="background-color: #da69de;">
+                            <h2>DSA</h2>
+                            <b>Data Structures and Algorithms</b><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis, natus facere, vero
+                                officiis delectus, quibusdam placeat quasi ipsam quis quos numquam debitis doloribus!
+                                Saepe corporis impedit est maxime aut?</p>
+                        </div>
+
+                        <div class="card8" id="IIOT" onclick="enlargeCard('IIOT');" style="background-color: #f44336;">
+                            <h2>IIOT</h2>
+                            <b>Industrial Internet of Things</b><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa at perferendis neque
+                                odit, non omnis laboriosam dolores rem quis nesciunt placeat a quod ratione fugiat ea
+                                molestias voluptate dolor.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <script src="notes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer | FOCUS MODE</title>
+    <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+    
+
+ <div class="container">
+        <div id="timer-message">Please select a timer before starting.</div>
+        
+        <div class="timer">
+            <h1>⏰ Pomodoro Timer</h1>
+            
+            <div class="button-container">
+                <button class="button" id="pomodoro-session">Pomodoro</button>
+                <button class="button" id="short-break">Short Break</button>
+                <button class="button" id="long-break">Long Break</button>
+            </div>
+            
+            <main>
+                <div id="default-display" class="default-message">
+                    <h2>🍅 Pomodoro Technique</h2>
+                    <div class="feature-list">
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Enhanced Focus</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Boosts Productivity</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🧠</span>
+                            <span>Better Time Management</span>
+                        </div>
+                    </div>
+                    <p>Select a timer mode to begin your focused work session</p>
+                </div>
+                
+                <div id="pomodoro-timer" class="timer-display" data-duration="1500">
+                    <h1 class="time">25:00</h1>
+                    <div class="label">🍅 Focus Time</div>
+                </div>
+                
+                <div id="short-timer" class="timer-display" data-duration="300">
+                    <h1 class="time">5:00</h1>
+                    <div class="label">☕ Short Break</div>
+                </div>
+                
+                <div id="long-timer" class="timer-display" data-duration="900">
+                    <h1 class="time">15:00</h1>
+                    <div class="label">🌟 Long Break</div>
+                </div>
+
+            </main>
+            <div class="duration-options" id="pomodoro-options">
+                    <button class="duration-btn selected" data-time="1500">25 min</button>
+                    <button class="duration-btn" data-time="2700">45 min</button>
+                    <input type="number" id="custom-input" placeholder="Custom (mins)" min="1" />
+                    <button id="set-custom">Set</button>
+                </div>
+            
+            <div class="buttons">
+                <button id="start">START</button>
+                <button id="stop">STOP</button>
+            </div>
+        </div>
+    </div>
+
+
+<script src="timer.js"></script>
+</body></html>
