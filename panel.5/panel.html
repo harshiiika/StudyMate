@@ -1,0 +1,367 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel-StudyMate</title>
+    <link rel="stylesheet" href="panel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="/images/logo2.png" alt="logo" class="logo">
+
+            <div class="hi">
+                <h2>HI HARSHIKA !</h2>
+                <h3>How are you feeling today?</h3>
+            </div>
+
+            <div class="icons-top">
+                <button class="btn2"><i class="fa-solid fa-bell" style="font-size: 25px;"></i></button>
+                <a href="/Profile/profile.html"><button class="btn1"><i class="fa-solid fa-user-tie"
+                            style="font-size: 25px;"></i></button></a>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+
+            <div class="sidebar">
+
+
+                <a href="/chatty/chat.html"><i class="fa-solid fa-comments"></i></a>
+                <a href="/diary/auth.diary.html"> <i class="fa-solid fa-book"></i></a>
+                <a href="/notes/notes.html"><i class="fa-solid fa-note-sticky"></i></a>
+                <a href="/panel.5/panel.html"><i class="fa-solid fa-house"></i></a><br><br>
+
+                <a href="/welcome.4/welcome.html"><i class="fa-solid fa-right-from-bracket"
+                        style="font-size: 40px;  margin: 30px 30px; color: rgb(132, 121, 191);"></i></a>
+
+            </div>
+
+            <div class="middle">
+
+                <div class="main-mid">
+                    <div class="section1">
+                        <div class="one">
+
+                            <div class="apps">
+
+                                <div class="top">
+                                    <a href="http://pinterest.com"><i class="fa-brands fa-pinterest"
+                                            style="color: crimson;"></i></a>
+                                    <a href="http://github.com"><i class="fa-brands fa-github"
+                                            style="color: rgb(255, 255, 255); "></i></a>
+                                </div>
+
+                                <div class="bottom">
+                                    <a href="http://spotify.com"><i class="fa-brands fa-spotify"
+                                            style="color: green;"></i></a>
+                                    <a href="http://linkedin.com"><i class="fa-brands fa-linkedin"
+                                            style="color: blue;"></i></a>
+                                </div>
+                            </div>
+
+                            <img src="/images/download (2).jpeg" alt="star-img" class="star">
+                        </div>
+
+                        <div class="two">
+                            <img src="/images/download (1).jpeg" alt="planet" class="planet">
+
+                            <div class="container py-4">
+
+                                <div class="folders">
+                                    <i class="fa-solid fa-folder" onclick="triggerUpload(0)"></i>
+                                    <i class="fa-solid fa-folder" onclick="triggerUpload(1)"></i>
+                                </div>
+
+                                <input type="file" id="fileInput0" multiple hidden onchange="handleFiles(event, 0)">
+                                <input type="file" id="fileInput1" multiple hidden onchange="handleFiles(event, 1)">
+
+                                <div id="fileList0" class="file-list"></div>
+                                <div id="fileList1" class="file-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="three">
+
+                            <div class="card text-center" id="plantCard">
+                                <div class="card-body">
+                                    <div id="plantEmoji" style="font-size: 60px;">🌱</div>
+                                    <p class="card-text">Keep growing by completing tasks!</p>
+                                    <button class="btn btn-success" onclick="growPlant()">Mark Progress</button>
+                                </div>
+                            </div>
+
+                            <div class="text-center" id="focusWheelContainer">
+                                <h5 class="mb-3">Wheel of Focus</h5>
+                                <button class="btn btn-primary mb-3" id="spin" onclick="spinWheel()"><i
+                                        class="fa-solid fa-dharmachakra" style="color: #B197FC;"></i></button>
+                                <div id="wheelResult" class="alert alert-info d-none" role="alert"></div>
+                            </div>
+
+                            <button class="btn-plus" onclick="openPopup()"><i class="fa-solid fa-plus"
+                                    id="plus"></i></button>
+                            <div class="popup" id="popup">
+                                <div class="up">
+                                    <div class="calculator">
+
+                                        <input type="text" id="cal" class="display" disabled>
+                                        <div class="button-container">
+
+                                            <button class="button clear" onclick="clearDisplay()">c</button>
+
+                                            <button class="button operator" onclick="appendOperation('/')">/</button>
+                                            <button class="button operator" onclick="appendOperation('*')">*</button>
+                                            <button class="button operator" onclick="appendOperation('-')">-</button>
+                                            <button class="button operator" onclick="appendNumber('.')">.</button>
+
+
+                                            <button class="button" onclick="appendNumber('7')">7</button>
+                                            <button class="button" onclick="appendNumber('8')">8</button>
+                                            <button class="button" onclick="appendNumber('9')">9</button>
+                                            <button class="button operator" onclick="appendOperation('+')">+</button>
+
+                                            <button class="button" onclick="appendNumber('4')">4</button>
+                                            <button class="button" onclick="appendNumber('5')">5</button>
+                                            <button class="button" onclick="appendNumber('6')">6</button>
+                                            <button class="button equal" onclick="calculate()">=</button>
+
+                                            <button class="button" onclick="appendNumber('1')">1</button>
+                                            <button class="button" onclick="appendNumber('2')">2</button>
+                                            <button class="button" onclick="appendNumber('3')">3</button>
+                                            <button class="button" onclick="appendNumber('0')">0</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="clock">
+                                        <div class="one">
+                                            <a href="/clock/timer.html"><button class="btn-clock"><i
+                                                        class="fa-solid fa-stopwatch"></i></button></a>
+                                            <a href="/quiz/quiz.html"><button class="quiz"><i
+                                                        class="fa-solid fa-brain"></i></button></a>
+                                        </div>
+                                        <div class="time"></div>
+                                        <div class="notifications">
+                                            <h2 style="color: gray;">NOTIFICATIONS</h2>
+                                            <ul>
+                                                <li>Test uncompleted COA</li>
+                                                <li>Message from CLG group </li>
+                                                <li>Due Today's Diary Page</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="mop">
+                                    <div class="mood">
+                                        <h3>Currently Feeling</h3>
+                                        <div class="moods">
+                                            <i id="face1" class="fa-solid fa-face-laugh-beam "
+                                                style="color: yellow;"></i>
+                                            <i id="face2" class="fa-solid fa-face-frown"
+                                                style="color: rgb(202, 57, 210);"></i>
+                                            <i id="face3" class="fa-solid fa-face-meh" style="color: grey;"></i>
+                                            <i id="face4" class="fa-solid fa-face-angry"
+                                                style="color: rgb(223, 51, 51);"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="quote">
+                                        <b>PROGRESS OVER PERFECTION!</b>
+                                    </div>
+
+                                    <div class="options">
+                                        <button class="settings"><i class="fa-solid fa-gear"></i></button>
+                                        <button class="x" onclick="closePopup()"><i class="fa-solid fa-circle-xmark"
+                                                style="font-size: x-large;"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <i class="fa-brands fa-google"></i>
+                    <input type="text" placeholder="Search Any Query" class="searchbar"> -->
+                        <!-- </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="right">
+
+                <div class="calendar">
+                    <div class="header2">
+                        <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
+                        <div id="Month-Year"></div>
+                        <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+
+                    <div class="days" id="days"></div>
+
+                </div>
+
+                <div class="main-todo">
+                    <div class="heading">To - Do List</div>
+                    <div class="to-do">
+                        <input type=" text" id="input" placeholder="Enter Your Task"><button id="addToDo">+</button>
+                        <div class="todos" id=ToDos></div>
+                    </div>
+                </div>
+                <!-- <img src="/images/moon wallpaper 🌜.jpeg" alt="moon" class="moon"> -->
+            <!-- </div>
+        </div>
+    </div>
+</body>
+<script src="panel.js"></script>
+
+</html>   -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate</title>
+    
+    <link rel="stylesheet" href="panel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🎮</div>
+                <h2>STUDYMATE<br>ARCADE</h2>
+            </div>
+            <div class="user-section">
+                <div class="score">SCORE: 1337</div>
+                <div class="user-avatar">H</div>
+            </div>
+        </header>
+
+        <div class="welcome-section">
+            <h1 class="welcome-title">PLAYER HARSHIKA</h1>
+            <p class="welcome-subtitle">READY TO LEVEL UP YOUR KNOWLEDGE?</p>
+        </div>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <div class="card-header">
+                    <div class="card-icon">📋</div>
+                    <h3 class="card-title">DAILY QUESTS</h3>
+                </div>
+                <div class="todo-input">
+                    <input type="text" placeholder="NEW QUEST..." id="todoInput">
+                    <button class="pixel-btn" onclick="addTodo()">ADD</button>
+                </div>
+                <div class="todo-list" id="todoList">
+                    <div class="todo-item">
+                        <span>MATH BOSS FIGHT</span>
+                        <button onclick="completeTodo(this)">✓</button>
+                    </div>
+                    <div class="todo-item">
+                        <span>PHYSICS PUZZLE</span>
+                        <button onclick="completeTodo(this)">✓</button>
+                    </div>
+                    <div class="todo-item">
+                        <span>CHEMISTRY LAB</span>
+                        <button onclick="completeTodo(this)">✓</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="card-header">
+                    <div class="card-icon">📅</div>
+                    <h3 class="card-title">GAME CALENDAR</h3>
+                </div>
+                <div class="calendar-header">
+                    <button class="calendar-nav" onclick="previousMonth()">‹</button>
+                    <div class="calendar-month" id="calendarMonth">SEPTEMBER 2025</div>
+                    <button class="calendar-nav" onclick="nextMonth()">›</button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="card-header">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">POWER LEVEL</h3>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="progress-text">LEVEL 12 - 60% TO NEXT</div>
+                    <div class="level-badge">KNOWLEDGE WARRIOR</div>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <div class="card-header">
+                    <div class="card-icon">🕹️</div>
+                    <h3 class="card-title">POWER-UPS & TOOLS</h3>
+                </div>
+                <div class="links-grid">
+                    <a href="#" class="link-card" onclick="showAchievement()">
+                        <span class="link-icon">📖</span>
+                        <a href="/diary/auth.diary.html">
+                        <span class="link-title">Diary</span></a>
+                    </a>
+                    <a href="#" class="link-card">
+                        <span class="link-icon">📊</span>
+                        <a href="/chatbot/index.html">
+                        <span class="link-title">Dashboard</span></a>
+                    </a>
+                    <a href="#" class="link-card">
+                        <span class="link-icon">🎯</span>
+                        <a href="/notes/notes.html">
+                        <span class="link-title">Notes</span></a>
+                    </a>
+                    <a href="#" class="link-card">
+                        <span class="link-icon">🏆</span>
+                        <a href="/chatty/chat.html">
+                        <span class="link-title">Chat</span></a>
+                    </a>
+                    <a href="#" class="link-card">
+                        <span class="link-icon">⚙️</span>
+                        <a href="/Profile/profile.html">
+                        <span class="link-title">Profile</span></a>
+                    </a>
+                    <a href="#" class="link-card">
+                        <span class="link-icon">👥</span>
+                        <a href="/quiz/quiz.html">
+                        <span class="link-title">Quiz</span></a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement" id="achievement">
+        <div>🎉 ACHIEVEMENT UNLOCKED!</div>
+        <div>Study Streak Master!</div>
+    </div>
+    <script src="panel.js"></script>
+</body>
+</html>
